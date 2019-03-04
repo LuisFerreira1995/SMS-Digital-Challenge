@@ -13,7 +13,7 @@ Navigation Menu (Hamburguer) - Sidenav Toggle thast opens and close the menu to 
 First Page - Responsive Grid
 
   Includes a Responsive Grid with all the data from the data.json file, which can be filtered with the date picker.
-  All headers are sorteable.
+  All headers are sortable.
   
 Second Page - Form
 
