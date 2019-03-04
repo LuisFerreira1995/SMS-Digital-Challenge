@@ -1,0 +1,46 @@
+<div class="home"> 
+    <section class="intro-section">
+      <div class="introduction">
+        <div class="intro-bg-style">
+          <div class="intro-bg-img"></div>
+        </div>
+      </div>
+      <div class="intro-text">
+        <div class="container container-entry-text">
+          <div class="row">
+            <div class="col-xs-12 entry-content">
+              <h1>{{title}}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="filter-list">
+      <div class="row">
+        <div class="example-container">
+          <form [formGroup]="myForm">
+            <mat-form-field class="col-sm-12">
+              <input matInput placeholder="Enter your email" [formControl]="email" required>
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+            
+            <mat-form-field class="col-sm-12">
+              <input matInput type="password" minlength="8" placeholder="Password" formControlName="password" required>
+              <mat-error *ngIf="myForm.hasError('required', 'password')">
+                Please enter your password with a minimum of 8 characters.
+              </mat-error>
+            </mat-form-field>
+          
+            <mat-form-field class="col-sm-12">
+              <input matInput type="password" placeholder="Confirm password" formControlName="confirmPassword" [errorStateMatcher]="matcher">
+                <mat-error *ngIf="myForm.hasError('notSame')">
+                Passwords do not match.
+              </mat-error>  
+            </mat-form-field>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+

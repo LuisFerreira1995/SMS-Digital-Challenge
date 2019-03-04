@@ -1,0 +1,118 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+/* FONT FACES */
+@font-face {
+	font-family: 'LatoBold';
+	src:url('fonts/Lato/Lato-Bold.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'LatoBlack';
+	src:url('fonts/Lato/Lato-Black.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lato';
+	src:url('fonts/Lato/Lato-Regular.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'LatoMedium';
+	src:url('fonts/Lato/Lato-Medium.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'LatoLight';
+	src:url('fonts/Lato/Lato-Light.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'fontello';
+	src:url('fonts/fontello.woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* GUIDE STYLES */
+* { 
+	margin:0; padding:0; box-sizing:border-box; 
+}
+html{
+	height:100%;
+	width:100%;
+}
+html, body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+}
+body{
+	/* background: linear-gradient(to bottom,#f9fbf7, #C9D8FF); */
+	height:100%;
+	display:table;
+	width:100%;
+}
+a:hover, a:active, a:focus, input:hover, input:focus, button:hover, button:focus {
+	outline: 0;
+}
+.full-width {
+  width: 100%;
+}
+.white-text {
+  color: #fff;
+}
+.title {
+  font-size: 16px;
+  padding: 10px 0;
+}
+.table_center{
+	display:table-cell;
+	vertical-align: middle;
+}
+.mat-paginator-container{
+    justify-content: center !important;
+}
+.mat-datepicker-toggle-active, .mat-form-field.mat-focused .mat-form-field-label{
+	color: sandybrown
+}
+.mat-form-field.mat-focused .mat-input-element{
+  caret-color: sandybrown
+}
+.mat-form-field.mat-focused .mat-form-field-ripple{
+  background: sandybrown
+}
+body.home-styles .mat-form-field-appearance-legacy .mat-form-field-underline{
+  height: 0;
+}
+body.home-styles .mat-form-field-appearance-legacy .mat-form-field-infix{
+  margin-top: -3px;
+}
+.mat-icon-button.mat-primary, .mat-list-base .mat-list-item .mat-list-item-content{
+  color: white;
+}
+.mat-toolbar.mat-warn, .mat-drawer{
+  background: black;
+}
+.mat-nav-list .mat-list-item:hover {
+	background-color: #ccc;
+	}
+
+.col-sm-1 {width: 8.33%;}
+.col-sm-2 {width: 16.66%;}
+.col-sm-3 {width: 25%;}
+.col-sm-4 {width: 33.33%;}
+.col-sm-5 {width: 41.66%;}
+.col-sm-6 {width: 50%;}
+.col-sm-7 {width: 58.33%;}
+.col-sm-8 {width: 66.66%;}
+.col-sm-9 {width: 75%;}
+.col-sm-10 {width: 83.33%;}
+.col-sm-11 {width: 91.66%;}
+.col-sm-12 {width: 100%;}

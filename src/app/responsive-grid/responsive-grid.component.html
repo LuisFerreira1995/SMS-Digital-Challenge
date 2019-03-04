@@ -1,0 +1,86 @@
+<div class="home"> 
+  <section class="intro-section">
+    <div class="introduction">
+      <div class="intro-bg-style">
+        <div class="intro-bg-img"></div>
+      </div>
+    </div>
+    <div class="intro-text">
+      <div class="container container-entry-text">
+        <div class="row">
+          <div class="col-xs-12 entry-content">
+            <h1>{{title}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="filter-list">
+    <div class="row">
+      <div class="col-md-8 container-filters"> 
+        <div class="opportunities-list">
+          <section class="component-filter">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="jobs-filter">
+                  <div class="row">
+                    <div class="jobs-filter--field col-sm-12">
+                      <div class="filter-field--wrapper filter-location" >
+                        <div class="filter-select js-show-filter icon-down-dir">
+                          <span class="filter-select--title">
+                            <!-- <mat-form-field>
+                              <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                            </mat-form-field> -->
+                            <mat-form-field class="full-width">
+                              <input matInput [matDatepicker]="picker" (keyup)="applyFilter($event.target.value)" placeholder="Choose a starting date">
+                              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                              <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                          </span>
+                          <div class="filter-select--labels"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="grid-list">
+            <div class="mat-elevation-z8">
+              <mat-table [dataSource]="dataSource" matSort matSortActive="city" matSortDirection="asc">
+                <ng-container matColumnDef="city">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>City</mat-header-cell>
+                  <mat-cell *matCellDef="let user">{{user.city}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="start_date">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>Start Date</mat-header-cell>
+                  <mat-cell *matCellDef="let user">{{user.start_date}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="end_date">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>End Date</mat-header-cell>
+                  <mat-cell *matCellDef="let user">{{user.end_date}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="price">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>Price</mat-header-cell>
+                  <mat-cell *matCellDef="let user">{{user.price}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="status">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+                  <mat-cell *matCellDef="let user">{{user.status}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="color">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>Color</mat-header-cell>
+                  <mat-cell *matCellDef="let user">{{user.color}}</mat-cell>
+                </ng-container>
+                <mat-header-row *matHeaderRowDef="displayedColumns" color="primary"></mat-header-row>
+                <mat-row *matRowDef="let row; columns:displayedColumns"></mat-row>
+              </mat-table>
+              <mat-paginator [pageSizeOptions]="[25]" showFirstLastButtons></mat-paginator>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
